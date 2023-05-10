@@ -4,13 +4,13 @@ Generators
 # =============================================================================
 # Generators: Yield Keyword
 # =============================================================================
-def fibonacci(limit):
+def fibonacci(limit):  # here fibonacci() is defined as a generative function
     a, b = 0, 1
     while a < limit:
-        yield a
+        yield a # yield is a special generative function
         a, b = b, a + b
 
-fib_gen = fibonacci(10)
+fib_gen = fibonacci(10) # the function returns multiple values, instead of just one
 for number in fib_gen:
     print(number)
     
